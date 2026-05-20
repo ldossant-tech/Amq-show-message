@@ -1,0 +1,37 @@
+apiVersion: broker.amq.io/v1beta1
+kind: ActiveMQArtemis
+metadata:
+  name: amq-broker
+  namespace: amq
+spec:
+  version: "7.13.0"
+  adminUser: admin
+  adminPassword: admin
+  deploymentPlan:
+    size: 1
+    image: placeholder
+    persistenceEnabled: true
+    journalType: nio
+    requireLogin: true
+    messageMigration: false
+    managementRBACEnabled: false
+  console:
+    expose: true
+  acceptors:
+    - name: all
+      protocols: all
+      port: 61616
+      expose: false
+  brokerProperties:
+    - addressSettings."activemq.management#".managementMessageAttributeSizeLimit=-1
+    - addressSettings.showLines.managementMessageAttributeSizeLimit=-1
+    - addressConfigurations.showLarge.routingTypes=ANYCAST
+    - addressConfigurations.showLarge.queueConfigs.showLarge.address=showLarge
+    - addressConfigurations.showLarge.queueConfigs.showLarge.routingType=ANYCAST
+    - addressSettings.showLarge.maxSizeBytes=104857600
+    - addressSettings.showLarge.addressFullMessagePolicy=PAGE
+    - addressConfigurations.showLines.routingTypes=ANYCAST
+    - addressConfigurations.showLines.queueConfigs.showLines.address=showLines
+    - addressConfigurations.showLines.queueConfigs.showLines.routingType=ANYCAST
+    - addressSettings.showLines.maxSizeBytes=104857600
+    - addressSettings.showLines.addressFullMessagePolicy=PAGE

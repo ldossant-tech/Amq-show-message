@@ -159,7 +159,6 @@ A Red Hat documenta:
 Referências oficiais:
 
 * [Red Hat AMQ Broker 7.13 - Configuring AMQ Broker](https://docs.redhat.com/en/documentation/red_hat_amq_broker/7.13/html-single/configuring_amq_broker/index?utm_source=chatgpt.com)
-* [Red Hat AMQ Broker 7.13 - Managing AMQ Broker](https://docs.redhat.com/en/documentation/red_hat_amq_broker/7.13/pdf/managing_amq_broker/Red_Hat_AMQ_Broker-7.13-Managing_AMQ_Broker-en-US.pdf?utm_source=chatgpt.com)
 * [Red Hat AMQ Broker - Working with Large Messages](https://docs.redhat.com/en/documentation/red_hat_amq/7.6/html/configuring_amq_broker/large_messages?utm_source=chatgpt.com)
 
 Trechos relevantes:
